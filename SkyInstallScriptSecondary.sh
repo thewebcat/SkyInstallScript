@@ -139,9 +139,17 @@ echo "Skywire node is now started and you can see it in on the Monitor."
 ###### Download start / stop scripts
 echo "Downloading autostart scripts from TheSKYpeople Github" 
 cd ~
-wget https://raw.githubusercontent.com/TheSKYpeople/SkyInstallScript/master/ServiceStartSkycoinWallet.sh
-wget https://raw.githubusercontent.com/TheSKYpeople/SkyInstallScript/master/ServiceStartSkywireSecondary.sh
-wget https://raw.githubusercontent.com/TheSKYpeople/SkyInstallScript/master/ServiceStopSkywire.sh
+wget https://raw.githubusercontent.com/thewebcat/SkyInstallScript/master/ServiceStartSkycoinWallet.sh
+wget https://raw.githubusercontent.com/thewebcat/SkyInstallScript/master/ServiceStartSkywireSecondary.sh
+wget https://raw.githubusercontent.com/thewebcat/SkyInstallScript/master/ServiceStopSkywire.sh
 
- 
+###### Move script to init.d directory 
+chmod +x ServiceStartSkycoinWallet.sh
+chmod +x ServiceStartSkywireSecondary.sh
+cp ServiceStartSkycoinWallet.sh /etc/init.d/
+cp ServiceStartSkywireSecondary.sh /etc/init.d/
+
+###### Invoke update-rc.d
+update-rc.d ServiceStartSkycoinWallet.sh defaults
+update-rc.d ServiceStartSkywireSecondary.sh defaults 
 
