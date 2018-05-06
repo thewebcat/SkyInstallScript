@@ -15,9 +15,12 @@
 #######################################################################################################################################################################
 #######################################################################################################################################################################
 
+export GOPATH="/root/go"
+
 ##### This starts the Skywire Node
 cd $GOPATH/bin
-./manager -web-dir ${GOPATH}/src/github.com/skycoin/skywire/static/skywire-manager > /dev/null 2>&1 &
+sleep 30
+#./manager -web-dir ${GOPATH}/src/github.com/skycoin/skywire/static/skywire-manager > /dev/null 2>&1 &
 
 ##### This starts the Skywire Monitor from the Master/Primary board (OrangePI 1)
 ./node -connect-manager -manager-address 192.168.0.101:5998 -manager-web 192.168.0.101:8000  -address :5000 -web-port :6001 > /dev/null 2>&1 &
