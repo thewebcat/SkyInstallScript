@@ -147,6 +147,14 @@ wget https://raw.githubusercontent.com/TheSKYpeople/SkyInstallScript/master/Serv
 wget https://raw.githubusercontent.com/TheSKYpeople/SkyInstallScript/master/ServiceStartSkywirePrimary.sh
 wget https://raw.githubusercontent.com/TheSKYpeople/SkyInstallScript/master/ServiceStopSkywire.sh
 
+###### Move script to init.d directory 
+cp ServiceStartSkycoinWallet.sh /etc/init.d/
+cp ServiceStartSkywirePrimary.sh /etc/init.d/
+
+###### Invoke update-rc.d
+update-rc.d ServiceStartSkycoinWallet.sh defaults
+update-rc.d ServiceStartSkywirePrimary.sh defaults
+
 ##### Executing InstallScript Part 2 (SkyInstallScriptRemote.sh) for installation of OrangePI 2-8 via SSH
 ###### Downloading Part 2
 cd ~
