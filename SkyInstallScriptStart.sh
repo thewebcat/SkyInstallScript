@@ -148,6 +148,8 @@ wget https://raw.githubusercontent.com/thewebcat/SkyInstallScript/master/Service
 wget https://raw.githubusercontent.com/thewebcat/SkyInstallScript/master/ServiceStopSkywire.sh
 
 ###### Move script to init.d directory 
+chmod +x ServiceStartSkycoinWallet.sh
+chmod +x ServiceStartSkywirePrimary.sh
 cp ServiceStartSkycoinWallet.sh /etc/init.d/
 cp ServiceStartSkywirePrimary.sh /etc/init.d/
 
