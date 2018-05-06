@@ -143,9 +143,9 @@ sleep 10
 ###### Download start / stop scripts
 echo "Downloading autostart scripts from TheSKYpeople Github" 
 cd ~
-wget https://raw.githubusercontent.com/TheSKYpeople/SkyInstallScript/master/ServiceStartSkycoinWallet.sh
-wget https://raw.githubusercontent.com/TheSKYpeople/SkyInstallScript/master/ServiceStartSkywirePrimary.sh
-wget https://raw.githubusercontent.com/TheSKYpeople/SkyInstallScript/master/ServiceStopSkywire.sh
+wget https://raw.githubusercontent.com/thewebcat/SkyInstallScript/master/ServiceStartSkycoinWallet.sh
+wget https://raw.githubusercontent.com/thewebcat/SkyInstallScript/master/ServiceStartSkywirePrimary.sh
+wget https://raw.githubusercontent.com/thewebcat/SkyInstallScript/master/ServiceStopSkywire.sh
 
 ###### Move script to init.d directory 
 cp ServiceStartSkycoinWallet.sh /etc/init.d/
@@ -158,7 +158,7 @@ update-rc.d ServiceStartSkywirePrimary.sh defaults
 ##### Executing InstallScript Part 2 (SkyInstallScriptRemote.sh) for installation of OrangePI 2-8 via SSH
 ###### Downloading Part 2
 cd ~
-wget https://raw.githubusercontent.com/TheSKYpeople/SkyInstallScript/master/SkyInstallScriptRemote.sh
+wget https://raw.githubusercontent.com/thewebcat/SkyInstallScript/master/SkyInstallScriptRemote.sh
 ###### Changing permissions 
 chmod 755 SkyInstallScriptRemote.sh
 ###### Execute Part 2
