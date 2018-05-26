@@ -164,7 +164,7 @@ wget https://raw.githubusercontent.com/thewebcat/SkyInstallScript/master/SkyInst
 ###### Changing permissions 
 chmod 755 SkyInstallScriptRemote.sh
 ###### Execute Part 2
-./SkyInstallScriptRemote.sh
+bash SkyInstallScriptRemote.sh
 
 
 
